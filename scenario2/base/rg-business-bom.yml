@@ -4,7 +4,7 @@
   apiVersion: hub.k8s.sap.com/v1
   kind: ClusterBom
   metadata:
-    name: rggrafana
+    name: rg-business-bom
     namespace: garden-hubtest
   spec:
     applicationConfigs:
