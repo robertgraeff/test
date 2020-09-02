@@ -11,8 +11,8 @@ spec:
       cluster:
         kubeconfigSecretRef:
           key: kubeconfig
-          name: rg.kubeconfig
-        namespace: rgkappstate
+          name: rg-robot-secret
+        namespace: garden-hubtest
       deploy:
       - kapp: {}
       fetch:
@@ -24,4 +24,4 @@ spec:
           paths:
           - scenario2/base
           - scenario2/cluster1
-  secretRef: rg.kubeconfig
+  secretRef: rg-robot-secret
