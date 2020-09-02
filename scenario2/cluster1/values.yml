@@ -1,0 +1,3 @@
+#@data/values
+---
+secret_ref: rg.kubeconfig

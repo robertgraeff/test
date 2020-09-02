@@ -1,0 +1,20 @@
+#@ load("@ytt:data", "data")
+
+---
+  apiVersion: hub.k8s.sap.com/v1
+  kind: ClusterBom
+  metadata:
+    name: rggrafana
+    namespace: garden-hubtest
+  spec:
+    applicationConfigs:
+    - configType: helm
+      id: grafana11
+      typeSpecificData:
+        catalogAccess:
+          chartName: grafana
+          chartVersion: 5.0.0
+          repo: stable
+        installName: grafana11
+        namespace: rg11
+    secretRef: #@ data.values.secret_ref
