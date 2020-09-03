@@ -1,0 +1,6 @@
+#@ load("@ytt:data", "data")
+#@ load("@ytt:template", "template")
+#@ load("rg-business-bom.lib.yml", "define_clusterbom")
+
+#@ for/end app in data.values.apps:
+--- #@ template.replace(define_clusterbom(app))

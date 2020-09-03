@@ -1,0 +1,22 @@
+#@ load("@ytt:data", "data")
+
+#@ def define_clusterbom(app):
+---
+  apiVersion: hub.k8s.sap.com/v1
+  kind: ClusterBom
+  metadata:
+    name: #@ app.clusterbom_name
+    namespace: garden-hubtest
+  spec:
+    applicationConfigs:
+    - configType: helm
+      id: grafana11
+      typeSpecificData:
+        catalogAccess:
+          chartName: grafana
+          chartVersion: 5.0.0
+          repo: stable
+        installName: grafana11
+        namespace: rg11
+    secretRef: #@ app.secret_ref
+#@

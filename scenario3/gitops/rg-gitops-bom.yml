@@ -1,0 +1,27 @@
+apiVersion: hub.k8s.sap.com/v1
+kind: ClusterBom
+metadata:
+  name: rg-gitops-bom
+  namespace: garden-hubtest
+spec:
+  applicationConfigs:
+  - configType: kapp
+    id: simple
+    typeSpecificData:
+      cluster:
+        kubeconfigSecretRef:
+          key: kubeconfig
+          name: rg-robot-secret
+        namespace: garden-hubtest
+      deploy:
+      - kapp: {}
+      fetch:
+      - git:
+          ref: origin/master
+          url: https://github.com/robertgraeff/test
+      template:
+      - ytt:
+          paths:
+          - scenario3/base
+          - scenario3/cluster1
+  secretRef: rg-robot-secret
