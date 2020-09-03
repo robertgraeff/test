@@ -19,4 +19,4 @@
         installName: grafana11
         namespace: rg11
     secretRef: #@ app.secret_ref
-#@
+#@ end
