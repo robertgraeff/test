@@ -1,7 +1,7 @@
 #@data/values
 ---
 apps:
-- clusterbom_name: rg-business-bom
+- clusterbom_name: rg-business-bom-1
   secret_ref: rg.kubeconfig
 - clusterbom_name: rg-business-bom-2
   secret_ref: rg2.kubeconfig
