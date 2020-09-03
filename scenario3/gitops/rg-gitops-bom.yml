@@ -23,5 +23,5 @@ spec:
       - ytt:
           paths:
           - scenario3/base
-          - scenario3/cluster1
+          - scenario3/clusters
   secretRef: rg-robot-secret
