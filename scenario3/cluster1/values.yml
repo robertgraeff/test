@@ -5,4 +5,6 @@ apps:
   secret_ref: rg.kubeconfig
 - clusterbom_name: rg-business-bom-2
   secret_ref: rg2.kubeconfig
+- clusterbom_name: rg-business-bom-3
+  secret_ref: rg3.kubeconfig
     
